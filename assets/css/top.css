@@ -1,0 +1,220 @@
+@charset 'UTF-8';
+/* -----------------------
+    フッターの現在地点の設定
+    ----------------------*/
+.nav-top{
+    background-color:var(--accent-yellow);
+}
+/* ----------------------------
+    キービジュアルのポジションの親の設定
+-------------------------------*/
+.kv-wrap{
+    width: 100vw;
+    height: calc(100vh - 125px);
+    position: relative;
+}
+@media(width>=1200px){
+    .kv-wrap{
+        height: calc(100vh - 60px);
+    }
+}
+
+/* --------------------------
+    画像とタイトルの設定
+    -------------------------*/
+.kv-photo {
+    max-width: 200px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.kv-title {
+    font-family: DM Serif Text;
+    font-size: 3.5rem;
+    line-height: 3.0rem;
+    text-align: center;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0;
+    animation: feedin 2s forwards 2.8s;
+}
+@media (width>=600px) {
+    .kv-photo {
+        max-width: 350px;
+    }
+    .kv-title {
+        font-size: 6rem;
+        line-height: 6rem;
+    }
+}
+@media (width>=1200px) {
+    .kv-title {
+        top: 85%;
+    }
+}
+
+/* -----------------------
+    お花のアニメーションの設定
+    ---------------------- */
+/* 全てのお花を初期は透明する設定 */
+img[class^="top-animation"] {
+    opacity: 0;
+}
+/* 各花のアニメーションと位置と大きさの設定 */
+/*タイトルすぐ左の花*/
+.top-animation1 {
+    width: 35%;
+    min-width: 100px;
+    max-width: 150px;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 60%;
+    left: 0%;
+    animation: feedin 2s forwards 2.8s;
+}
+/* タイトルすぐ右の花 */
+.top-animation2 {
+    width: 35%;
+    min-width: 100px;
+    max-width: 150px;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 65%;
+    right: 0%;
+    animation: feedin 2s forwards 2.8s;
+}
+
+.top-animation3 {
+    width: 100px;
+    aspect-ratio: 1;
+    opacity: 0.5;
+    position: absolute;
+    top: 5%;
+    left: 65%;
+    transform: rotate(20deg);
+    animation: feedin1 1s forwards 1.6s;
+}
+.top-animation4 {
+    width: 85px;
+    aspect-ratio: 1;
+    opacity: 0.5;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: -1;
+    animation: feedin1 1s forwards 1.2s;
+}
+.top-animation5 {
+    width: 60px;
+    aspect-ratio: 1;
+    opacity: 0.5;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: rotate(60deg);
+    z-index: -1;
+    animation: feedin1 1s forwards 2.4s;
+}
+.top-animation6 {
+    width: 100px;
+    aspect-ratio: 1;
+    opacity: 0.5;
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    z-index: -1;
+    animation: feedin1 1s forwards 2s;
+}
+
+.top-animation7 {
+    width: 80px;
+    aspect-ratio: 1;
+    opacity: 0.5;
+    position: absolute;
+    top: 45%;
+    left: 65%;
+    z-index: -1;
+    animation: feedin1 1s forwards 0.8s;
+}
+/* タイトル横の２つの花のアニメーション */
+@keyframes feedin {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* 複数の半透明の花のアニメーション */
+@keyframes feedin1 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@media (width>=600px) {
+/* 画像のサイズ */
+    .top-animation1,
+    .top-animation2 {
+        max-width: 200px;
+    }
+    .top-animation3,
+    .top-animation6 {
+        width: 200px;
+    }
+    .top-animation4,
+    .top-animation7 {
+        width: 120px;
+    }
+    .top-animation5 {
+        width: 120px;
+    }
+/* ポジションの設定 */
+    .top-animation1 {
+        left: 10%;
+    }
+    .top-animation2 {
+        right: 8%;
+    }
+}
+@media (width>=1200px) {
+/* ポジションの設定 */
+    .top-animation1 {
+        left: 25%;
+    }
+    .top-animation2 {
+        right: 25%;
+    }
+    .top-animation3 {
+        left: 80%;
+    }
+    .top-animation4 {
+        left: 20%;
+    }
+    .top-animation5 {
+        left: 60%;
+    }
+    .top-animation7 {
+        left: 80%;
+    }
+}
+
+/*-----------------------------
+    コピーライト、トップページだけ中身がないから、ここで調節する
+  ----------------------------- */
+.copyright {
+    position: absolute;
+    bottom: 0px;
+    right: 5%;
+    margin: 0px;/*打ち消し*/
+}

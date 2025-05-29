@@ -1,0 +1,142 @@
+@charset 'UTF-8';
+/* -----------------------
+    現在地点の設定
+    ---------------------- */
+    .nav-blog{
+        background-color:var(--accent-yellow);
+    }
+
+
+/* --------------------------
+    ブログの背景の設定
+    -------------------------*/
+.wrapper{
+    position: relative;
+}
+.wrapper:before{
+    content: "";
+    /* background-color:var(--main2-color); */
+    background-image: url(../../img/img-top/flower.JPG);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.main_inner{
+    background-color:#fff;
+    }
+
+/* -------------------------
+    各セクションの横幅を800pxにして読みやすくする設定
+----------------------------*/
+section{
+    max-width: 800px;
+    margin: 0 auto;;
+}
+
+/* --------------------------
+    タイトルと目次の設定
+    -------------------------*/
+/* 各目次のセンター揃えの設定 */
+h2{
+    text-align: center;
+    border-bottom:solid 2px var(--main-color);
+    margin-bottom: 15px;
+}
+
+
+/* ----------------------
+    キービジュアルの設定
+    ------------------------*/
+/* キービジュアルの写真の設定 */
+.kv-photo{
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+}
+/* キービジュアルの写真と目次のフレックスの設定 */
+.kv-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    padding-top: 50px;
+}
+@media(width>=600px){
+    .kv-wrap{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .kv-photo{
+        width: 60%;
+    }
+    .blog-title-wrap{
+        width: 40%;
+    }
+    .blog-title,
+    .blog-nav{
+        width: fit-content;
+        margin: 0 auto;;
+    }
+    .blog-title p{
+        text-align: center;
+    }
+}
+/* タイトルと目次の間の余白の設定 */
+.blog-title{
+    margin-bottom: 50px;
+}
+/* タイトル下の発表日の文字の大きさ変更 */
+.blog-title p{
+    font-size: 1.4rem;
+}
+
+
+/* ----------------------
+    目次の設定
+    ----------------------- */
+/* 目次のリンクにアンダーラインつける設定 */
+.blog-nav li{
+    text-decoration: underline 1px var(--link-color);
+    color: var(--link-color);
+    margin-bottom: 10px;
+    transition: all 0.5s ease-in-out;
+}
+@media(width>=1200px){
+    .blog-nav li{
+        margin-bottom: 5px;
+    }
+}
+.blog-nav li:hover{
+    color:var(--main-color);
+}
+
+
+/* -------------------------
+    参考サイト
+   -------------------------- */
+/* 参考サイトの黒丸を敢えて復活させた設定 */
+.reference-site li{
+    list-style-type: disc;
+    margin-left: 25px;
+}
+/* リンクの色設定 */
+.reference-site a{
+    text-decoration: underline;
+    color:var(--link-color);
+    transition: all 0.5s ease-in-out;
+}
+.reference-site a:hover{
+    color:var(--main-color);
+}
+/* リンク間の距離の設定 */
+.reference-site li{
+    margin-bottom: 40px;
+}

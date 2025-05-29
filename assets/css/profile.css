@@ -1,0 +1,277 @@
+@charset 'UTF-8';
+/* ---------------------------
+    フッターの現在地点の設定
+    -------------------------- */
+    .nav-profile{
+        background-color:var(--accent-yellow);
+    }
+
+/* 各セクションのタイトルの設定 */
+.profile-h2 {
+    font-family: Diphylleia;
+    color:var(--main-color);
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+}
+@media (width>=600px) {
+    .profile-h2 {
+        font-size: 6rem;
+    }
+}
+@media (width>=1200px) {
+    .profile-h2 {
+        font-size: 7rem;
+        margin-bottom: 60px;
+    }
+}
+
+/* --------------------------
+    経歴の設定
+    -------------------------- */
+/* 全体の枠の設定 */
+.career-wrap {
+    max-width: 800px;/*横並びにした時に中央揃えにしたいから*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+/* 経歴の写真の設定 */
+.career-photo {
+    width: 200px;
+    aspect-ratio: 1;
+    object-position: top center;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 5px 10px #bebebe;
+}
+/* 名前の枠の設定 */
+.career-name {
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* フリガナの大きさの設定 */
+.career-name span{
+    font-size: 1.4rem;
+    color: var(--main-color);
+}
+@media (width>=600px) {
+    .career-wrap {
+        flex-direction: row;
+        margin: 0 auto;/*要素を中央揃え*/
+    }
+    .career-photo {
+        width: 40%;
+        min-width: 200px;
+    }
+    .career-text {
+        width: 60%;
+    }
+}
+
+/* ----------------------
+    きっかけの設定
+    ---------------------- */
+/* 全体の大枠の設定 */
+.trigger-wrap{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+/* 画像の大枠の設定 */
+.trigger-img{
+    width: 100%;
+    height: 250px;
+    margin-bottom: 40px;
+    position: relative;
+}
+/* ２つの画像の設定 */
+.trigger-img img{
+    width: 70%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 10px;
+    object-position: center center;
+}
+/* 2つ目の重なっている画像の設定 */
+.trigger-img img:last-child{
+    position: absolute;
+    top:50%;
+    right: 0;
+    z-index: -1;
+}
+@media(width>=600px){
+    .trigger-wrap{
+        flex-direction: row;
+        gap: 20px;
+    }
+    .trigger-text{
+        width: 50%;
+    }
+    .trigger-img{
+        width: 50%;
+        height: auto;
+    }
+}
+@media(width>=1200px){
+    .trigger-wrap{
+margin-bottom: 100px;
+    }
+}
+
+/* ------------------------
+    性格の設定
+    -----------------------*/
+/* 性格の背景色の設定 */
+.personality-bgc{
+    background-color: var(--blue-bgc);
+}
+/* 性格全体の設定 */
+.personality-wrap {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+/* 性格のセクションのタイトル */
+.personality-wrap h2{
+    color: #fff;
+}
+/* 性格のテキストのh3の設定 */
+.personality-text h3{
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+/* 性格のテキストのpの設定 */
+.personality-text{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+@media(width>=600px){
+    .personality-text{
+        margin-bottom: 60px;
+    }
+}
+
+/* -----------------------
+    スキルの設定
+    -----------------------*/
+/* スキル全体の大枠の設定 */
+.skills-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+/* スキルカードの設定 */
+.skill-card{
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+/* スキルカードの画像の設定 */
+.skill-card img {
+    width:30%;
+}
+/* スキルカードのテキストの設定 */
+.skill-text{
+    width: 70%;
+}
+/* スキルカードのテキストのh3の設定 */
+.skill-text h3{
+    text-align: center;
+    font-size: 2.3rem;
+}
+/* スキルカードのテキストの黒丸の設定 */
+.skill-text li{
+    display: list-item;
+    list-style-type: disc;    /* 黒丸「•」のビュレットを指定します */
+    list-style-position: outside; /* ビュレットをコンテンツの外側に配置します（デフォルトの挙動） */
+    margin-left: 20px;        /* ビュレットを表示するためのスペースを確保します。この値は適宜調整してください。 */
+}
+
+@media(width>=600px){
+    .skills-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: flex-start;/*打ち消し*/
+    }
+}
+@media(width>=1200px){
+    .skills-wrap {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 50px;
+        margin-bottom: 20px;/*PC版だけ。次のセクションとの距離が近いので設定*/
+    }
+}
+
+
+/* -----------------------
+    趣味の設定
+    ----------------------- */
+/* 趣味全体の設定 */
+.likes-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 40px;
+}
+/* 趣味のカードの設定 */
+.like-card {
+    width: 80%;
+    margin: 0 auto;
+}
+/* 趣味のカードの画像の設定 */
+.like-card img {
+    width: 100%;
+    aspect-ratio: 1;
+    margin: 0 auto;
+}
+/* 趣味のカードのタイトルの設定 */
+.like-card h3 {
+    text-align: center;
+    font-size: 2.3rem;
+}
+
+@media(width>=600px){
+    .likes-wrap {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 20px;
+    }
+}
+@media(width>=1200px){
+    .likes-wrap {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+
+
+/* 横から写真が出てくるトランジション（js）  一旦コメントアウト*/
+
+/* .slide {
+    opacity: 0;
+    transform: translate(-100%, 0);
+    transition-duration: 2s;
+}
+.scroll-in {
+    opacity: 1;
+    transform: translate(0, 0);
+} */

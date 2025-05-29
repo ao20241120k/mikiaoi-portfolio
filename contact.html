@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | MIKI AOI's Portfolio</title>
+    <meta name="description" content="三木葵へのお問い合わせページです。お気軽にお問い合わせください。" />
+    <meta name="keywords" content="三木葵,お問い合わせ,コンタクト,contact">
+    <!-- CSSの読み込み -->
+    <link rel="stylesheet" href="./assets/css/destyle.css" />
+    <link rel="stylesheet" href="./assets/css/common.css" />
+    <link rel="stylesheet" href="./assets/css/contact.css" />
+    <!-- フォントの読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Diphylleia&family=Noto+Sans+JP:wght@100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Faviconの読み込み -->
+    <link rel="icon" href="./assets/img/img-common/favicon.ico">
+</head>
+<body class="wrapper">
+    <main>
+        <h1 class="page-title">Contact</h1>
+        <div class="main_inner">
+            <form id="entryForm" action="#" method="post">
+                <table class="entryTable">
+                    <caption>気軽にお問合せください。全ての項目を入力して、送信してください。</caption>
+                    <tr>
+                        <th>氏名<span>※必須</span></th>
+                        <td><input type="text" name="contact-name" required autofocus placeholder="氏名を入力してください"></td>
+                    </tr>
+                    <tr>
+                        <th>メールアドレス<span>※必須</span></th>
+                        <td><input type="email" name="email" required placeholder="半角で入力してください"></td>
+                    </tr>
+                    <tr>
+                        <th>お問合せ内容<span>※必須</span></th>
+                        <td><select name="content" required>
+                                <option value="0" selected>選択してください</option>
+                                <option value="1">仕事のご相談</option>
+                                <option value="2">制作物について</option>
+                                <option value="3">ブログについて</option>
+                                <option value="4">その他</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>お問合せ詳細<span>※必須</span></th>
+                        <td><textarea name="comment" required rows="10" cols="10" placeholder="内容を入力してください"></textarea></td>
+                    </tr>
+                </table>
+                <div class="entryBtns">
+                    <input type="reset" value="全消去">
+                    <input type="submit" value="送信">
+                </div>
+            </form>
+            <div class="copyright">@2024 MIKI AOI</div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <nav class="g-nav">
+            <ul>
+                <li>
+                    <a href="./index.html" class="nav-top">
+                        <div class="nav-button">
+                            <img src="./assets/img/img-common/top-icon.png" alt="ネモフィラの花のアイコン" />
+                            <p>Top</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./profile.html" class="nav-profile">
+                        <div class="nav-button">
+                            <img src="./assets/img/img-common/profile-icon.png" alt="自分像のアイコン" />
+                            <p>Profile</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./works.html" class="nav-works">
+                        <div class="nav-button">
+                            <img src="./assets/img/img-common/work-icon.png" alt="パソコンのアイコン" />
+                            <p>works</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./blog.html" class="nav-blog">
+                        <div class="nav-button">
+                            <img src="./assets/img/img-common/blog-icon.png" alt="ブログのアイコン" />
+                            <p>Blog</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./contact.html" class="nav-contact">
+                        <div class="nav-button">
+                            <img src="./assets/img/img-common/contact-icon.png" alt="メールのアイコン" />
+                            <p>Contact</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

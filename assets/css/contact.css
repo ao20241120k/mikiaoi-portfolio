@@ -1,0 +1,112 @@
+@charset 'UTF-8';
+/* -------------------------
+    現在地点の設定
+    ------------------------- */
+    .nav-contact{
+        background-color:var(--accent-yellow);
+    }
+
+/*-------------------------
+    テーブルの設定
+    -------------------------*/
+/* テーブルの設定 */
+.entryTable {
+    width: 100%;
+    max-width:  800px;
+    border: 2px dotted var(--main-color);
+    border-collapse: separate; /* 罫線を分離し、border-radiusを有効にする */
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+}
+/* 「お気軽にお問い合わせください。」の設定 */
+.entryTable caption {
+    margin-bottom: 20px;
+}
+/* 各行のフレックスの設定 */
+.entryTable tr {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+/* SP版でthとtdの間の隙間の設定 */
+.entryTable td {
+    margin-top: 5px;
+}
+@media (width>=600px) {
+    .entryTable tr {
+        flex-direction: row;/*タブレット版から横並び*/
+    }
+    .entryTable th {
+        width: 35%;
+    }
+    .entryTable td{
+        width: 65%;
+        margin-top: 0px;/*打ち消し*/
+    }
+    .entryTable caption {
+        text-align: center;/*TB版から中央揃え*/
+    }
+}
+@media(width>=1200px){
+    .entryTable caption {
+        margin-top: 40px;
+    }
+}
+/* 「※必須事項」の設定 */
+.entryTable span {
+    color: var(--accent-yellow);
+    font-size: 1.4rem;
+}
+/* 入力する所を黒い淵をつける設定 */
+.entryTable input,
+.entryTable select,/*お問い合わせ内容*/
+.entryTable textarea {
+    border: 1px solid var(--main-color);
+    border-radius: 3px;
+    padding: 7px 10px;
+}
+/* テキストエリアの横幅 */
+.entryTable textarea {
+    width: 100%;
+}
+/* 入力フォームの枠の色付けの設定 */
+.entryTable input:focus,
+.entryTable select:focus,
+.entryTable textarea:focus{
+    border: 2px solid var(--link-color);
+}
+
+
+/* -----------------------
+    ボタンの設定
+    -----------------------*/
+/* ボタン全体の設定 */
+    .entryBtns {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    text-align: center;
+    margin-top: 40px;
+}
+/* 一つのボタンの設定 */
+.entryBtns input {
+    width: 140px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+/* 「送信」の設定 */
+.entryBtns input[type="submit"] {
+    background-color: var(--main-color);
+    transition: all 0.5s ease-in-out;
+}
+/* 「全消去」の設定 */
+.entryBtns input[type="reset"] {
+    background-color:var(--main2-color);
+    transition: all 0.5s ease-in-out;
+}
+/* ボタンのホバーの設定 */
+.entryBtns input:hover{
+    background-color:var(--accent-yellow);
+}

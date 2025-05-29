@@ -1,0 +1,40 @@
+@charset 'UTF-8';
+/* 各配色のボックスの設定 */
+.color-code1{
+    width: 50%;
+    background-color: #fff;
+}
+.color-code2{
+    width: 30%;
+    background-color: var(--main-color);
+}
+.color-code3{
+    width: 20%;
+    background-color: var(--main2-color);
+}
+.color-code4{
+    width: 10%;
+    background-color: var(--accent-yellow);
+}
+/* 全配色ボックスのPaddingの設定 */
+.color-code1,
+.color-code2,
+.color-code3,
+.color-code4{
+    padding: 5px;
+}
+/* 全配色ボックスの中の文字を縦書きにする設定 */
+.color-code p{
+    writing-mode: vertical-rl;
+}
+
+/* -----------------------
+    ポイントの設定
+   ----------------------- */
+/* 「イラストを描いてみた」の写真の設定 */
+.point img{
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+    margin-top: 20px;
+}

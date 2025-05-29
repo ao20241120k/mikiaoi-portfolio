@@ -1,0 +1,139 @@
+@charset 'UTF-8';
+
+/* ----------------------
+    ファビコンの簡単な説明
+    ----------------------- */
+/* ２ー１，２，３の行間の設定 */
+.explanation2,.explanation3{
+    margin-top: 80px;
+}
+@media(width>=600px){
+    .explanation2,.explanation3{
+        margin-top: 50px;
+    }
+}
+/* ================2-1=================== */
+/* ファビコンの簡単な説明2－1の写真の設定 */
+.explanation1 img{
+    width: 100%;
+    margin-top: 20px;
+}
+/* TB版からflexになる設定 */
+@media(width>=600px){
+    .explanation1{
+        max-width: 800px;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .explanation1-text{
+        width: 60%;
+    }
+    .explanation1 img{
+        width: 40%;
+        margin-top: 0px;/*打ち消し*/
+    }
+}
+/* ================2-2=================== */
+/* ２－２表の設定 */
+.explanation-table{
+    border:solid 1px var(--main2-color);
+    margin-top: 40px;
+}
+.explanation-table dt{
+    background:var(--main2-color);
+}
+.explanation-table dt,.explanation-table dd{
+    padding:5px;
+}
+@media(width>=600px){
+    .explanation-table dd{
+    padding-bottom:30px;
+    }
+}
+/* ================2-3=================== */
+/* ２－３メリットの設定 */
+.merit{
+    color:#ff4545;
+    margin:30px 0px;
+}
+
+/* -----------------------
+    実際に実装してみたの設定
+    ----------------------- */
+/* ３－１，２，３の行間の設定 */
+.practice2,.practice3{
+    margin-top: 80px;
+}
+@media(width>=600px){
+    .practice2,.practice3{
+        margin-top: 50px;
+    }
+}
+/* ================3-1=================== */
+/* ３－１の画像の設定 */
+.practice1 img{
+    width: 100%;
+}
+/* TB版からflexにする設定 */
+@media(width>=600px){
+.practice1{
+    display: flex;
+    gap:20px;
+}
+.practice1-text{
+    width: 60%;
+}
+.practice1 img{
+    width: 40%;
+}
+}
+
+/* ==============3-2==============- */
+/* ３－２の画像の設定 */
+.practice2 img{
+    width: 100%;
+}
+/* TB版からflexにする設定 */
+@media(width>=600px){
+.practice2{
+    display: flex;
+    gap: 20px;
+}
+.practice2 img{
+    width: 40%;
+}
+.practice2-text{
+    width: 60%;
+}
+}
+/* ３－２リンクの設定 */
+.practice2 a{
+    color:transparent;
+    background: linear-gradient(to right,var(--main-color) 50%,var(--link-color) 50%) 100%;
+    background-clip: text;
+    background-size: 200% 100%;
+    transition:background-position 0.3s;
+    border-bottom:solid 1px var(--link-color);
+}
+.practice2 a:hover{
+    background-position: 0 100%;
+}
+/* ==============3-3=================== */
+/* コードの設定 */
+.practice-cord{
+    border:dashed 3px var(--accent-yellow);
+    padding:5px;
+    margin-top: 20px;
+}
+@media(width>=600px){
+    .practice-cord{
+        text-align: center;
+    }
+}
+/* ３－３TB版から文字全体をセンター揃えの設定 */
+@media(width>=600px){
+    .practice3{
+        text-align: center;
+    }
+}

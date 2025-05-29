@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+.slick_inner{
+    min-width: 320px;
+    max-width: 1200px;
+    margin:0 auto;
+    padding: 0 20px;
+}
+
+/* 各配色のボックスの設定 */
+.color-code1{
+    width: 50%;
+    color: #fff;
+    background-color: #000;
+}
+.color-code2{
+    width: 36%;
+    background-color: #07C9F5;
+}
+.color-code3{
+    width: 7%;
+    background-color:  #E5FF64;
+}
+.color-code4{
+    width: 7%;
+    background-color: #FF3D3D;
+}
+/* 全配色ボックスのPaddingの設定 */
+.color-code1,
+.color-code2,
+.color-code3,
+.color-code4{
+    padding: 5px;
+}
+/* 全配色ボックスの中の文字を縦書きにする設定 */
+.color-code p{
+    writing-mode: vertical-rl;
+}

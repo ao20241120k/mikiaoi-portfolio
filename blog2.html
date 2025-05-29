@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文字や画像が順番に出てくるアニメーションの仕方 | Blog</title>
+    <meta name="description" content="これを覚えると応用がしやすいアニメーションかつ、スッキリとコードを書く方法を載せているので、ぜひ試してみてください。" />
+    <meta name="keywords" content="ブログ,アニメーション,CSS,文字や画像が順番に出てくる">
+    <!-- CSSの読み込み -->
+    <link rel="stylesheet" href="./assets/css/destyle.css" />
+    <link rel="stylesheet" href="./assets/css/common.css" />
+    <link rel="stylesheet" href="./assets/css/blog/blog-common.css" />
+    <link rel="stylesheet" href="./assets/css/blog/blog2.css">
+    <!-- フォントの読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Diphylleia&family=Noto+Sans+JP:wght@100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Faviconの読み込み -->
+    <link rel="icon" href="./assets/img/img-common/favicon.ico">
+</head>
+<body class="wrapper">
+    <main>
+        <div class="main_inner">
+            <div class="kv-wrap">
+                <img class="kv-photo" src="./assets/img/img-blog/blog2-title.png" alt="">
+                <div class="blog-title-wrap">
+                    <div class="blog-title">
+                        <h1>文字や画像が順番に出てくるアニメーションの仕方</h1>
+                        <p>発表日：2025年3月26日</p>
+                    </div>
+                    <nav class="blog-nav">
+                        <h2>目次</h2>
+                        <ul>
+                            <li><a href="#background">1、今回発表する背景</a></li>
+                            <li><a href="#explanation">2、解説</a></li>
+                            <li><a href="#application">3、さらに簡単にコードを書く方法</a></li>
+                            <li><a href="#issue">4、課題点</a></li>
+                            <li><a href="#reference-site">5、参考サイト</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+
+            <section id="background">
+                <h2>1、今回発表する背景</h2>
+                <p>自分のポートフォリオのトップページに、花が順番通りに出てくるアニメーションを実装しています。しかし当時は、意味も分からず使用していた為、改めて「animation-fill-mode」と「animation-diray」を調べたので、発表の題材にしました。
+            </p>
+            </section>
+
+
+            <section id="explanation" class="explanation">
+                <h2>2、解説</h2>
+                <div>
+                    <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="dPyZXjB" data-pen-title="文字や画像が順番に出てくるアニメーション" data-user="miki-aoi-the-builder" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                    <span>See the Pen <a href="https://codepen.io/miki-aoi-the-builder/pen/dPyZXjB">
+                    文字や画像が順番に出てくるアニメーション</a> by ao (<a href="https://codepen.io/miki-aoi-the-builder">@miki-aoi-the-builder</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+                    <script async src="https://public.codepenassets.com/embed/index.js"></script>
+                </div>
+                <div>
+                    <p>1、【HTML】で順番に表示させたいブロック毎にdivで括ります。さらに、それらをまとめてdivで括ります。</p>
+                    <p>2、【CSS】で、各文字を設定したいので、class="text"直下のdivに:first-child（1番目）や:nth-child(2)(2番目)、:last-child(最後)をつけて、設定をしていく</p>
+                    <p>3、文字を最初は透明な状態から浮かび上がらせたいので、opacity:0;にしておきます<br>
+                        <span>※これがないと、時間差で出てくる文字が最初から表示されてしまう</span></p>
+                    <p>4、@keyframsで0%{opacity:0;}100%{opacity:1;}で、文字を浮かび上がらせるアニメーションを作ります。</p>
+                    <p>5、表示させたい各ブロックにanimation:feedIn 5sで、5秒かけて透明から浮かび上がらせるアニメーションを設定します。
+                    </p>
+                    <p>6、次にanimation-delayで、表示するブロックを時間差で指定します。</p>
+                    <div class="code-explanation">
+                        <div>animation-delay</div>
+                        <div>アニメーションをいつ開始するかします。</div>
+                        <div>初期値は0s。単位はs(秒)かms(ミリ秒)。</div>
+                    </div>
+                    <p>7、最後に表示された状態を維持したいので、animation-fill-mode:forword;を書きます。<br>
+                        <span>※これを設定していないと、時間経過で最初のopacity:0;の状態になってしまう</span></p>
+                    <div class="code-explanation">
+                        <div>animation-fill-mode</div>
+                        <div>
+                            アニメーション実行中・後の状態
+                        </div>
+                        <div>
+                            none：適用なし(初期値)<br>
+                            backwards：開始前に0%の状態<br>
+                            forwards：終了後に100%の状態<br>
+                            both：backwardsとforwardsの状態
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="application" class="application">
+                <h2>3、さらに簡単にコードを書く方法</h2>
+                <div class="application1">
+                    <h3>・animationの中に機能をまとめる方法</h3>
+                    <div>
+                        <p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="gbOePqM" data-pen-title="文字や画像が順番に出てくるアニメーション文字や：簡単な方法" data-user="miki-aoi-the-builder" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                        <span>See the Pen <a href="https://codepen.io/miki-aoi-the-builder/pen/gbOePqM">
+                        文字や画像が順番に出てくるアニメーション文字や：簡単な方法</a> by ao (<a href="https://codepen.io/miki-aoi-the-builder">@miki-aoi-the-builder</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                        </p>
+                        <script async src="https://public.codepenassets.com/embed/index.js"></script>
+                    </div>
+                    <div class="application-text">
+                        <p>1、animation-fill-modeの「forwards」とanimation-delayの秒数をanimationの中に書きます。</p>
+                    </div>
+                </div>
+                <div class="application2">
+                    <h3>・文字全体のまとまりにanimationを書く方法</h3>
+                    <div>
+                        <p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="azbYdBK" data-pen-title="文字や画像が順番に出てくるアニメーションの仕方：さらに簡単な方法" data-user="miki-aoi-the-builder" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                        <span>See the Pen <a href="https://codepen.io/miki-aoi-the-builder/pen/azbYdBK">
+                        文字や画像が順番に出てくるアニメーションの仕方：さらに簡単な方法</a> by ao (<a href="https://codepen.io/miki-aoi-the-builder">@miki-aoi-the-builder</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                        </p>
+                        <script async src="https://public.codepenassets.com/embed/index.js"></script>
+                    </div>
+                    <div class="application-text">
+                        <p>1、各ブロックをまとめた.text divに先述のようにanimationを書きます。</p>
+                        <p>2、各文字の設定で、animation-delayを設定します。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="issue">
+                <h2>４、課題点</h2>
+                <p>当時はコードの意味を理解しきれていない状態で使用していたので、しっかりと理解していれば、後々のアニメーションに役に立ったなと思いました。
+</p>
+            </section>
+            <section id="reference-site" class="reference-site">
+                <h2>５、参考サイト</h2>
+                <ul>
+                    <li><a href="https://chiiweb.net/media/fadein/ " target="_blank" rel=”noopener”>
+                            【CSS】テキストを順番にフェードインするアニメーション
+                        </a></li>
+                    <li><a href="https://mitsutano-oshiro.com/archives/2160" target="_blank" rel=”noopener”>【CSSアニメーション】文字を順番に表示させる方法を解説します。</a></li>
+                </ul>
+            </section>
+            <div class="copyright">@2024 MIKI AOI</div>
+        </div>
+    </main>
+    <footer class="footer">
+        <nav class="g-nav">
+            <ul>
+                <li>
+                    <a href="./index.html" class="nav-top">
+                        <div class="nav-button">
+                            <img src="./assets/img/img-common/top-icon.png" alt="ネモフィラの花のアイコン" />
+                            <p>Top</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./profile.html" class="nav-profile">
+                        <div class="nav-button">
+                            <img src="./assets/img/img-common/profile-icon.png" alt="自分像のアイコン" />
+                            <p>Profile</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./works.html" class="nav-works">
+                        <div class="nav-button">
+                            <img src="./assets/img/img-common/work-icon.png" alt="パソコンのアイコン" />
+                            <p>works</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./blog.html" class="nav-blog">
+                        <div class="nav-button">
+                            <img src="./assets/img/img-common/blog-icon.png" alt="ブログのアイコン" />
+                            <p>Blog</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./contact.html" class="nav-contact">
+                        <div class="nav-button">
+                            <img src="./assets/img/img-common/contact-icon.png" alt="メールのアイコン" />
+                            <p>Contact</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

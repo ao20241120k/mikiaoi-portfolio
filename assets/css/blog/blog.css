@@ -1,0 +1,99 @@
+@charset 'UTF-8';
+/* ---------------------------
+    現時点の黒丸の設定
+   --------------------------- */
+   .nav-blog{
+    background-color:var(--accent-yellow);
+}
+
+
+/* ---------------------------
+        ブログの中のナビ
+   --------------------------- */
+/* ナビの大枠の設定 */
+.blog-nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+@media(width>=600px){
+    .blog-nav ul{
+        justify-content: flex-start;/*TB版から左側固定*/
+        gap: 30px;
+        }
+}
+/* ナビの設定 */
+.blog-nav li{
+    font-size: 1.5rem;
+    background-color: var(--main2-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top:50px;
+    transition: all 0.5s ease-in-out;
+}
+/* ナビのホバー設定 */
+.blog-nav li:hover{
+    background-color: var(--main-color);
+    }
+/* 最初だけ選択している設定 */
+.blog-nav li:first-child{
+    background-color: var(--main-color);
+}
+
+
+/* -----------------------------
+        カードの設定
+   -----------------------------*/
+/* カード全体の設定 */
+.blog-wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:40px;
+    margin-top: 40px;
+}
+@media(width>=675px){/*ブレイクポイントを変更*/
+    .blog-wrap{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr ;
+    }
+}
+@media(width>=1200px){
+    .blog-wrap{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        margin-top: 60px;
+    }
+}
+/* カード単体の設定 */
+.blog-card{
+    width: 280px;
+    padding: 10px 0px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    transition: all 0.5s ease-in-out;
+}
+/* カードホバー時の設定 */
+.blog-card:hover{
+    opacity: 0.7;
+    transform: scale(1.05);
+}
+/* カードの画像の設定 */
+.blog-card img{
+    width: 100%;
+    height: 170px;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+}
+/* カードのタイトルの設定 */
+h2{
+    width: 100%;
+    display: flex;
+    height: 50px;;
+    align-items: center;
+}

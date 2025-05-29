@@ -1,0 +1,219 @@
+@charset 'UTF-8';
+/* ---------------------
+    サイト全共通設定
+    --------------------*/
+/* フォントのサイズを10pxに揃える設定 */
+html {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 62.5%;
+}
+@media(width>=1200px){
+    html{
+        letter-spacing: 0.3rem;
+    }
+}
+
+/* 画像が荒くならない設定 */
+.img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* カラーの設定 */
+:root{
+    --main-color:#70b0e8;
+    --main2-color:#dedede;
+    --accent-yellow:#EDCA24;
+    --blue-bgc:#9cc6eb;
+    --yellow-bgc:#ffec80;
+    --link-color:#1d0cd3;
+}
+
+/* フォントサイズの設定 */
+h1{
+    font-size: 3.5rem;
+}
+h2{
+    font-size: 2.0rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+
+
+/* --------------------------------
+    全体のページの背景色
+    フォントサイズ
+    フッター高さを差し引き
+   --------------------------------*/
+.wrapper {
+    background-color: #fff;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    padding-bottom: 125px;/*SP版フッターの高さ*/
+}
+@media (width>=1200px) {
+    .wrapper {
+        padding-bottom: 60px;
+    }
+}
+
+
+/*-------------------------
+    フッターの設定
+  -------------------------*/
+  /* フッター全体の設定 */
+.footer {
+    width: 100vw;
+    height: 125px;
+    background-color:var(--main-color);
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+}
+@media (width>=1200px) {
+    .footer {
+        height: 60px;
+    }
+}
+/* ナビゲーションを横並びにする設定 */
+.g-nav ul {
+    display: flex;
+}
+/* アイコンと文字の設定 */
+.nav-button {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@media (width>=1200px) {
+    .nav-button {
+        flex-direction: row;
+    }
+}
+
+/* アンカー要素の設定 */
+.g-nav a {
+    font-family: Diphylleia;
+    letter-spacing: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 125px;/*フッターと同じ高さ*/
+    transition: all 0.5s ease-in-out;
+}
+@media (width>=1200px) {
+    .g-nav a {
+        font-size: 2.5rem;
+        height: 60px;
+    }
+}
+/* アンカーのホバー設定 */
+.g-nav a:hover {
+    background-color: var(--blue-bgc);
+}
+/* アイコンの画像の大きさの設定 */
+.g-nav img {
+    width: 50px;
+    aspect-ratio: 1;
+    justify-self: center;
+}
+.footer li{
+    width: 100%;/*これがないと、アイコンが乱れる*/
+    height: 125px;
+}
+
+
+/*---------------------------
+    インナークラスの設定
+  ---------------------------*/
+.main_inner{
+    min-width: 320px;
+    max-width: 1200px;
+    padding: 0px 20px;
+    margin:0 auto;
+}
+@media(width>=600px){
+    .main_inner{
+        padding: 0px 40px;
+    }
+}
+
+
+/*----------------------
+    コピーライトの設定
+  ----------------------*/
+.copyright {
+    font-family: DM Serif Text;
+    font-size: 1.4rem;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+@media (width>=1200px) {
+    .copyright {
+        padding-top: 60px;/*PC版は少し余白が欲しいから*/
+    }
+}
+
+
+/* ----------------------------
+    一覧ページとお問い合わせのタイトルの設定
+   ----------------------------*/
+/* タイトルの設定 */
+.page-title {
+    font-family: Diphylleia;
+    font-size: 5rem;
+    color: #000;
+    text-align: center;
+    position: relative;
+}
+
+/* タイトル下の装飾の設定 */
+.page-title::after {
+    content: "";
+    width: 100%;
+    height:100px;
+    background-image: url(../img/img-top/flower.JPG);
+    opacity: 0.5;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0%;
+    left: 0%;;
+    z-index: -1;
+}
+@media (width>=600px) {
+    .page-title {
+        font-size: 7rem;
+    }
+    .page-title::after{
+        height: 130px;
+    }
+}
+@media (width>=1200px) {
+    .page-title {
+        font-size: 8rem;
+    }
+    .page-title::after{
+        height: 150px;
+    }
+}
+
+
+/* ----------------------------
+    セクションの余白の設定
+    ----------------------------*/
+/* 各セクション間の設定 */
+section {
+    padding: 60px 0px;
+}
+@media (width>=600px) {
+    section {
+        padding: 120px 0px;
+    }
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ファビコンの設置の仕方 | Blog</title>
+    <meta name="description" content="ウインドウの左上にあるアイコン（ファビコン）を入れたい！HTMLにコードを一行足すだけで簡単設置出来るので、ぜひ試してみてください。" />
+    <meta name="keywords" content="ブログ,ファビコン,ファビコン設置,HTML,html">
+    <!-- CSSの読み込み -->
+    <link rel="stylesheet" href="./assets/css/destyle.css" />
+    <link rel="stylesheet" href="./assets/css/common.css" />
+    <link rel="stylesheet" href="./assets/css/blog/blog-common.css" />
+    <link rel="stylesheet" href="./assets/css/blog/blog1.css">
+    <!-- フォントの読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Diphylleia&family=Noto+Sans+JP:wght@100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Faviconの読み込み -->
+    <link rel="icon" href="./assets/img/img-common/favicon.ico">
+</head>
+<body class="wrapper">
+    <main>
+        <div class="main_inner">
+            <div class="kv-wrap">
+                <img class="kv-photo" src="./assets/img/img-blog/blog1-title.png" alt="ウインドウのタブにあるネモフィラの花のファビコン">
+                <div class="blog-title-wrap">
+                    <div class="blog-title">
+                        <h1>ファビコンの設置の仕方</h1>
+                        <p>発表日：2025年2月27日</p>
+                    </div>
+                    <nav class="blog-nav">
+                        <h2>目次</h2>
+                        <ul>
+                            <li><a href="#background">1、今回発表する背景</a></li>
+                            <li><a href="#explanation">2、ファビコンの簡単な説明</a></li>
+                            <li><a href="#practice">3、実際に実装してみた</a></li>
+                            <li><a href="#issue">4、課題点</a></li>
+                            <li><a href="#reference-site">5、参考サイト</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <section id="background">
+                <h2>1、今回発表する背景</h2>
+                <p>ポートフォリオ制作にあたり、自分のポートフォリオにファビコンの実装を
+                試みたので、実際にした方法や情報を共有できればと思い、発表の題材にしました。
+            </p>
+            </section>
+
+            <section id="explanation" class="explanation">
+                <h2>2、ファビコンの簡単な説明</h2>
+                <div class="explanation1">
+                    <div class="explanation1-text">
+                        <h3>2-1ファビコンとは？</h3>
+                        <p>ファビコンとは、ブラウザのタブの左端に表示されている小さなアイコンの事です。他、ブックマークやお気に入り、検索画面やショートカットに表示されます。</p>
+                    </div>
+                    <img src="./assets/img/img-blog/blog1-explanation.jpg" alt="ファビコンの表示されている場所">
+                </div>
+                <div class="explanation2">
+                    <h3>2-2ファビコンのファイル形式とサイズ</h3>
+                    <p>ファイル形式はico形式がおススメです。pngやgifなどは、ブラウザによって対応していない場合があります。サイズは以下の通りです(一部抜粋してます)。
+                </p>
+                    <dl class="explanation-table">
+                        <dt>16px×16px</dt>
+                        <dd>Microsoft Edgeのブラウザのタブ</dd>
+                        <dt>32px×32px</dt>
+                        <dd>Google Chrome、Safari、Firefoxなどのブラウザタブで使用</dd>
+                        <dt>180px×180px</dt>
+                        <dd>iOS、Androidのホーム画面のアイコンで使用</dd>
+                        <dt>256px×256px</dt>
+                        <dd>Androidのホーム画面のアイコンなどで使用</dd>
+                        <dt>516px×516px</dt>
+                        <dd>WordPressで使用</dd>
+                    </dl>
+                </div>
+                <div class="explanation3">
+                    <h3>2-3ファビコンのメリット</h3>
+                    <p>未配置のサイトに比べて目立ちやすく、他サイトとの差別化が出来ます。視認性があると、ユーザーが自然と目にする回数を増やせる効果があります。それにより、以下の効果が得られます。
+                </p>
+                    <ul class="merit">
+                        <li>・視認性や認知力の向上</li>
+                        <li>・リピーターを獲得する</li>
+                        <li>・信頼度の向上</li>
+                        <li>・ブランドを喚起する</li>
+                    </ul>
+                    <p>SEO対策として直接的な影響はないですが、上記のメリットがあるので、ぜひ取り入れてみましょう。</p>
+                </div>
+            </section>
+
+            <section id="practice" class="practice">
+                <h2>3、実際に実装してみた</h2>
+                <div class="practice1">
+                    <div class="practice1-text">
+                        <h3>3-1画像の準備</h3>
+                        <p>ファビコン用にIbisPaintでネモフィラの花を描きました。画像の保存形式は、背景を透過させたかったので、png形式で保存しました。
+                    </p>
+                    </div>
+                    <img src="./assets/img/img-blog/blog1-drowing.jpg" alt="ファビコンを描いているイラスト">
+                </div>
+                <div class="practice2">
+                    <div class="practice2-text">
+                        <h3>3-2画像をico形式に変換する</h3>
+                        <p>ファイルを変換する為に、ファビコンジェネレーター(<a href="https://favicon-generator.mintsu-dev.com/" target="_blank" rel=”noopener”>https://favicon-generator.mintsu-dev.com/</a>)を使用しました。サイトを開いたら、先ほど書いた画像ファイルを選択する。全サイズを指定し、変換をします。変換後はダウンロードをすると、完了です。</p>
+                    </div>
+                    <img src="./assets/img/img-blog/blog1-practice.png" alt="png形式からico形式に変換する">
+                </div>
+                <div class="practice3">
+                    <h3>3-3HTMLにコードを書く</h3>
+                    <p>各ページのHTMLの＜head＞にコードを書くと完成です。順番は特に気にしなくていいです。</p>
+                    <p class="practice-cord">＜link rel=”icon” href=“/image/favicon.ico”＞</p>
+                </div>
+            </section>
+
+            <section id="issue">
+                <h2>４、課題点</h2>
+                <p>自分で描いたイラストをファビコンに出来たのは、良い経験でした。
+                思ったよりブラウザのタブで見てみると、かなり小さくなってしまい、
+                花とは分かりづらいと思いました。余裕があれば、各ページに違うイラストを
+                採用してみたいです。</p>
+            </section>
+
+            <section id="reference-site" class="reference-site">
+                <h2>５、参考サイト</h2>
+                <ul>
+                    <li><a href="https://digital-marketing.jp/creative/what-is-favicon/ " target="_blank" rel=”noopener”>ファビコン(favicon)とは？作成方法と設定方法について</a></li>
+                    <li><a href="https://page.delivery/media/design/favicon/" target="_blank" rel=”noopener”>ファビコン（favicon）とは？作り方や設定方法を完全マスター！</a></li>
+                    <li><a href="https://dym.asia/media/favicon/" target="_blank" rel=”noopener”>ファビコンとは？設定するメリット、設定方法、表示されないときの対処などを解説</a></li>
+                </ul>
+            </section>
+
+            <div class="copyright">@2024 MIKI AOI</div>
+        </div>
+    </main>
+    <footer class="footer">
+        <nav class="g-nav">
+            <ul>
+                <li>
+                    <a href="./index.html" class="nav-top">
+                        <div class="nav-button">
+                            <img src="./assets/img/img-common/top-icon.png" alt="ネモフィラの花のアイコン" />
+                            <p>Top</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./profile.html" class="nav-profile">
+                        <div class="nav-button">
+                            <img src="./assets/img/img-common/profile-icon.png" alt="自分像のアイコン" />
+                            <p>Profile</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./works.html" class="nav-works">
+                        <div class="nav-button">
+                            <img src="./assets/img/img-common/work-icon.png" alt="パソコンのアイコン" />
+                            <p>works</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./blog.html" class="nav-blog">
+                        <div class="nav-button">
+                            <img src="./assets/img/img-common/blog-icon.png" alt="ブログのアイコン" />
+                            <p>Blog</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./contact.html" class="nav-contact">
+                        <div class="nav-button">
+                            <img src="./assets/img/img-common/contact-icon.png" alt="メールのアイコン" />
+                            <p>Contact</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

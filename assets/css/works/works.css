@@ -1,0 +1,23 @@
+@charset 'UTF-8';
+
+/* -----「new」の設定------ */
+.work-card01::before{
+    content: "New!";
+    font-family: Sour Gummy;
+    color:#fff;
+    background-color: var(--accent-yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height:50px;
+    border-radius: 50%;
+    transform: rotate(-30deg);
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+/* relativeを一番最初のカードにつける設定 */
+.work-card01{
+    position: relative;
+}
