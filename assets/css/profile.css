@@ -264,14 +264,14 @@ margin-bottom: 100px;
 }
 
 
-/* 横から写真が出てくるトランジション（js）  一旦コメントアウト*/
-
-/* .slide {
+/* 横から写真が出てくるトランジション（js）*/
+.slide {
     opacity: 0;
-    transform: translate(-100%, 0);
+    transform: translate(0, 20%);
     transition-duration: 2s;
+    transition-timing-function: ease-in-out;
 }
 .scroll-in {
     opacity: 1;
     transform: translate(0, 0);
-} */
+}
