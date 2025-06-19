@@ -4,7 +4,7 @@
     ２、解説のテキスト
    ---------------------- */
 /* 文字間の設定 */
-.explanation p{
+.explanation li{
     margin-top: 50px;
 }
 /* ※の文字の設定 */
