@@ -60,22 +60,24 @@
                     </p>
                     <script async src="https://public.codepenassets.com/embed/index.js"></script>
                 </div>
-                <div>
-                    <p>1、【HTML】で順番に表示させたいブロック毎にdivで括ります。さらに、それらをまとめてdivで括ります。</p>
-                    <p>2、【CSS】で、各文字を設定したいので、class="text"直下のdivに:first-child（1番目）や:nth-child(2)(2番目)、:last-child(最後)をつけて、設定をしていく</p>
-                    <p>3、文字を最初は透明な状態から浮かび上がらせたいので、opacity:0;にしておきます<br>
-                        <span>※これがないと、時間差で出てくる文字が最初から表示されてしまう</span></p>
-                    <p>4、@keyframsで0%{opacity:0;}100%{opacity:1;}で、文字を浮かび上がらせるアニメーションを作ります。</p>
-                    <p>5、表示させたい各ブロックにanimation:feedIn 5sで、5秒かけて透明から浮かび上がらせるアニメーションを設定します。
-                    </p>
-                    <p>6、次にanimation-delayで、表示するブロックを時間差で指定します。</p>
+                <ol>
+                    <li>1、【HTML】で順番に表示させたいブロック毎にdivで括ります。さらに、それらをまとめてdivで括ります。</li>
+                    <li>2、【CSS】で、各文字を設定したいので、class="text"直下のdivに:first-child（1番目）や:nth-child(2)(2番目)、:last-child(最後)をつけて、設定をしていく</li>
+                    <li>3、文字を最初は透明な状態から浮かび上がらせたいので、opacity:0;にしておきます<br>
+                        <span>※これがないと、時間差で出てくる文字が最初から表示されてしまう</span>
+                    </li>
+                    <li>4、@keyframsで0%{opacity:0;}100%{opacity:1;}で、文字を浮かび上がらせるアニメーションを作ります。</li>
+                    <li>5、表示させたい各ブロックにanimation:feedIn 5sで、5秒かけて透明から浮かび上がらせるアニメーションを設定します。
+                    </li>
+                    <li>6、次にanimation-delayで、表示するブロックを時間差で指定します。</li>
                     <div class="code-explanation">
                         <div>animation-delay</div>
                         <div>アニメーションをいつ開始するかします。</div>
                         <div>初期値は0s。単位はs(秒)かms(ミリ秒)。</div>
                     </div>
-                    <p>7、最後に表示された状態を維持したいので、animation-fill-mode:forword;を書きます。<br>
-                        <span>※これを設定していないと、時間経過で最初のopacity:0;の状態になってしまう</span></p>
+                    <li>7、最後に表示された状態を維持したいので、animation-fill-mode:forword;を書きます。<br>
+                        <span>※これを設定していないと、時間経過で最初のopacity:0;の状態になってしまう</span>
+                    </li>
                     <div class="code-explanation">
                         <div>animation-fill-mode</div>
                         <div>
@@ -88,7 +90,7 @@
                             both：backwardsとforwardsの状態
                         </div>
                     </div>
-                </div>
+                </ol>
             </section>
 
 
